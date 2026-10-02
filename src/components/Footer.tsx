@@ -115,6 +115,54 @@ export const Footer: React.FC<FooterProps> = ({
           </div>
         </div>
 
+        {/* Academic Deliverables & FastAPI Backend Bar */}
+        <div className="w-full my-4 p-4 rounded-2xl bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 flex flex-col md:flex-row items-center justify-between gap-3 text-xs font-mono">
+          <div className="flex items-center gap-2 text-slate-700 dark:text-slate-200 font-bold">
+            <span className="px-2 py-0.5 rounded bg-[#153833] text-[#EFAEC4] text-[10px] uppercase font-bold tracking-wider">
+              Entregáveis
+            </span>
+            <span>Documentos Oficiais &amp; Backend FastAPI (MER):</span>
+          </div>
+
+          <div className="flex flex-wrap items-center justify-center gap-2">
+            <a
+              href="/api/download/framework-doc"
+              download
+              className="px-3 py-1.5 rounded-lg bg-white dark:bg-white/10 border border-slate-300 dark:border-white/20 hover:border-[#E07A9A] text-slate-800 dark:text-slate-200 font-semibold transition-colors flex items-center gap-1.5"
+              title="Baixar Relatório Oficial de Framework Application com CRUD e decisões interdisciplinares"
+            >
+              <span>📄 Doc Framework (.docx)</span>
+            </a>
+
+            <a
+              href="/api/download/mobile-doc"
+              download
+              className="px-3 py-1.5 rounded-lg bg-white dark:bg-white/10 border border-slate-300 dark:border-white/20 hover:border-[#E07A9A] text-slate-800 dark:text-slate-200 font-semibold transition-colors flex items-center gap-1.5"
+              title="Baixar Relatório Oficial de Mobile Hybrid Development"
+            >
+              <span>📱 Doc Mobile (.docx)</span>
+            </a>
+
+            <a
+              href="/api/download/fastapi-main"
+              download="main.py"
+              className="px-3 py-1.5 rounded-lg bg-[#153833] text-[#EFAEC4] hover:bg-[#1f5049] font-bold transition-colors flex items-center gap-1.5 shadow-xs"
+              title="Baixar código-fonte do Backend FastAPI em Python (MER Database Application + Endpoints CRUD)"
+            >
+              <span>🐍 Backend FastAPI (main.py)</span>
+            </a>
+
+            <a
+              href="/api/download/fastapi-readme"
+              download="README.md"
+              className="px-3 py-1.5 rounded-lg bg-white dark:bg-white/10 border border-slate-300 dark:border-white/20 hover:border-[#E07A9A] text-slate-800 dark:text-slate-200 transition-colors flex items-center gap-1"
+              title="Baixar manual de execução e documentação dos endpoints FastAPI"
+            >
+              <span>📖 Guia FastAPI (README)</span>
+            </a>
+          </div>
+        </div>
+
         {/* MONUMENTAL KINETIC FOOTER TITLE (Image 1 & Image 5 Style) */}
         <div className="w-full text-center select-none overflow-hidden pt-6 pb-2 border-t border-slate-200 dark:border-white/10">
           <div

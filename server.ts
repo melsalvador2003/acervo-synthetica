@@ -993,6 +993,22 @@ Responda APENAS em JSON:
     }
   });
 
+  // Endpoints para download direto dos arquivos do Backend FastAPI (Python)
+  app.get('/api/download/fastapi-main', (_req, res) => {
+    const filePath = path.join(process.cwd(), 'backend_fastapi', 'main.py');
+    res.download(filePath, 'main.py');
+  });
+
+  app.get('/api/download/fastapi-requirements', (_req, res) => {
+    const filePath = path.join(process.cwd(), 'backend_fastapi', 'requirements.txt');
+    res.download(filePath, 'requirements.txt');
+  });
+
+  app.get('/api/download/fastapi-readme', (_req, res) => {
+    const filePath = path.join(process.cwd(), 'backend_fastapi', 'README.md');
+    res.download(filePath, 'README.md');
+  });
+
   // Vite middleware for development or static serve for production
   if (process.env.NODE_ENV !== 'production') {
     const vite = await createViteServer({

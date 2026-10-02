@@ -190,21 +190,23 @@ export async function generateFrameworkDocxBuffer(): Promise<Buffer> {
 
           // Seção 5
           new Paragraph({
-            text: '5. ARQUITETURA TÉCNICA DO PORTAL (FRONT & BACK)',
+            text: '5. ARQUITETURA TÉCNICA DO PORTAL (FRONT & BACK FASTAPI)',
             heading: HeadingLevel.HEADING_1,
             spacing: { before: 240, after: 120 },
           }),
           new Paragraph({
             children: [
               new TextRun({ text: '• Frontend: ', bold: true }),
-              new TextRun('React 19 + TypeScript + Vite + Tailwind CSS + Motion.\n'),
-              new TextRun({ text: '• Backend & Servidor: ', bold: true }),
-              new TextRun('Node.js / Express integrado (server.ts) com rotas de API e proxy.\n'),
-              new TextRun({ text: '• Sistema de Gamificação: ', bold: true }),
-              new TextRun('Módulo modular memoriaAnos80.ts para verificação de fragmentos, controle de estado reativo e modal interativo MemoryChestModal com animações e efeitos sonoros retro.\n'),
-              new TextRun({ text: '• Controle de Estado & Persistência: ', bold: true }),
-              new TextRun('React Hooks e Context API com persistência local resiliente no localStorage.\n'),
-              new TextRun({ text: '• Acessibilidade: ', bold: true }),
+              new TextRun('React 19 + TypeScript + Vite + Tailwind CSS + Motion com arquitetura de componentes desacoplada e modular.\n'),
+              new TextRun({ text: '• Backend com FastAPI (Python): ', bold: true }),
+              new TextRun('Microsserviço RESTful construído em FastAPI (main.py) com banco de dados modelado rigorosamente sobre o MER da disciplina Database Application (Entidades: Obra, Categoria, Assinatura, Comentário e Gamificação). Implementado com banco em memória (lista de dicionários tipados com Pydantic) e documentação interativa Swagger/OpenAPI em /docs.\n'),
+              new TextRun({ text: '• Endpoints RESTful Implementados: ', bold: true }),
+              new TextRun('GET (/api/v1/obras, /api/v1/obras/{id}, /api/v1/gamificacao/fragmentos), POST (/api/v1/obras, /api/v1/assinaturas/checkout), PUT (/api/v1/obras/{id}), PATCH (/api/v1/obras/{id}/curtir) e DELETE (/api/v1/obras/{id}).\n'),
+              new TextRun({ text: '• Comunicação React <-> FastAPI: ', bold: true }),
+              new TextRun('Camada de serviço cliente (fastapiClient.ts) implementando requisições assíncronas assinaladas via fetch API, tratamento de exceções HTTP e suporte a CORS para interoperabilidade total.\n'),
+              new TextRun({ text: '• Sistema de Gamificação (Game Dev & Gamification): ', bold: true }),
+              new TextRun('Módulo modular memoriaAnos80.ts e endpoints dedicados no FastAPI para controle de fragmentos, status da Chave de 1994 e modal comemorativo MemoryChestModal.\n'),
+              new TextRun({ text: '• Acessibilidade Universal: ', bold: true }),
               new TextRun('AccessibilityContext com suporte a síntese de voz nativa (Web Speech API), redução de movimento, alto contraste e tamanho tipográfico ajustável.'),
             ],
             spacing: { after: 240 },

@@ -1,0 +1,8 @@
+{
+  "name": "Remix Portal Synthetica",
+  "description": "Museu digital interativo que preserva a história, uso e público de Dança, Música, Cinema, Artes Plásticas e Eletrônicos com curadoria mensal e Wrapped personalizado.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

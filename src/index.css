@@ -1,0 +1,710 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+  body {
+    overflow-x: hidden;
+    background-color: #ffffff;
+    color: #0f172a;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* ========================================================
+   REFINED BOTANICAL DARK MODE PALETTE
+   ======================================================== */
+
+html.dark {
+  color-scheme: dark;
+  background-color: #0d1514 !important;
+  color: #f1f5f4 !important;
+}
+
+html.dark body {
+  background-color: #0d1514 !important;
+  color: #f1f5f4 !important;
+}
+
+/* Dark Mode Surfaces with subtle elevation */
+html.dark .bg-white {
+  background-color: #14211e !important;
+  color: #f1f5f4 !important;
+}
+
+html.dark .bg-slate-50 {
+  background-color: #0f1917 !important;
+}
+
+html.dark .bg-slate-100 {
+  background-color: #182724 !important;
+}
+
+html.dark .bg-slate-200 {
+  background-color: #223632 !important;
+}
+
+html.dark .bg-slate-900\/90 {
+  background-color: rgba(13, 21, 20, 0.95) !important;
+}
+
+/* Borders & Separators */
+html.dark .border-slate-100,
+html.dark .border-slate-150,
+html.dark .border-slate-200,
+html.dark .border-slate-300 {
+  border-color: #273a36 !important;
+}
+
+html.dark .divide-slate-100 > :not([hidden]) ~ :not([hidden]),
+html.dark .divide-slate-200 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #273a36 !important;
+}
+
+/* Typography contrast in Dark Mode - High Readability & WCAG AAA Compliance */
+html.dark .text-slate-950,
+html.dark .text-gray-950,
+html.dark .text-zinc-950,
+html.dark .text-neutral-950,
+html.dark .text-stone-950 {
+  color: #ffffff !important;
+}
+
+html.dark .text-slate-900,
+html.dark .text-gray-900,
+html.dark .text-zinc-900,
+html.dark .text-neutral-900,
+html.dark .text-stone-900 {
+  color: #f8fafc !important;
+}
+
+html.dark .text-slate-800,
+html.dark .text-gray-800,
+html.dark .text-zinc-800,
+html.dark .text-neutral-800,
+html.dark .text-stone-800 {
+  color: #f1f5f9 !important;
+}
+
+html.dark .text-slate-700,
+html.dark .text-gray-700,
+html.dark .text-zinc-700,
+html.dark .text-neutral-700,
+html.dark .text-stone-700 {
+  color: #e2e8f0 !important;
+}
+
+html.dark .text-slate-600,
+html.dark .text-gray-600,
+html.dark .text-zinc-600,
+html.dark .text-neutral-600,
+html.dark .text-stone-600 {
+  color: #cbd5e1 !important;
+}
+
+html.dark .text-slate-500,
+html.dark .text-gray-500,
+html.dark .text-zinc-500,
+html.dark .text-neutral-500,
+html.dark .text-stone-500 {
+  color: #b4c7c3 !important;
+}
+
+html.dark .text-slate-400,
+html.dark .text-gray-400,
+html.dark .text-zinc-400,
+html.dark .text-neutral-400,
+html.dark .text-stone-400 {
+  color: #98aca7 !important;
+}
+
+html.dark .text-slate-300,
+html.dark .text-gray-300,
+html.dark .text-zinc-300,
+html.dark .text-neutral-300,
+html.dark .text-stone-300 {
+  color: #cbd5e1 !important;
+}
+
+html.dark .text-slate-200,
+html.dark .text-gray-200,
+html.dark .text-zinc-200,
+html.dark .text-neutral-200,
+html.dark .text-stone-200 {
+  color: #e2e8f0 !important;
+}
+
+/* Hover typography adaptations for dark mode */
+html.dark .hover\:text-slate-950:hover,
+html.dark .hover\:text-slate-900:hover,
+html.dark .hover\:text-slate-800:hover {
+  color: #ffffff !important;
+}
+
+html.dark .hover\:text-slate-700:hover,
+html.dark .hover\:text-slate-600:hover {
+  color: #f1f5f9 !important;
+}
+
+/* Category and badge text adaptations in dark mode: shift green hues to signature pink */
+html.dark .text-emerald-950,
+html.dark .text-emerald-900,
+html.dark .text-emerald-800,
+html.dark .text-emerald-700,
+html.dark .text-teal-900,
+html.dark .text-teal-800,
+html.dark .text-teal-700 {
+  color: #EFAEC4 !important;
+}
+
+html.dark .text-rose-900,
+html.dark .text-rose-800 {
+  color: #fecdd3 !important;
+}
+
+html.dark .text-purple-900,
+html.dark .text-purple-800 {
+  color: #e9d5ff !important;
+}
+
+html.dark .text-amber-900,
+html.dark .text-amber-800 {
+  color: #fde68a !important;
+}
+
+/* Botanical brand text adaptations in dark mode for dark canvases: signature pink */
+html.dark .text-\[\#153833\] {
+  color: #EFAEC4 !important;
+}
+
+/* Green poster card titles and details in pink */
+#curadoria-card-dark h2,
+#curadoria-card-dark h3,
+#curadoria-card-dark h4,
+#curadoria-card-dark [class*="text-emerald"],
+#curadoria-card-dark [class*="text-teal"] {
+  color: #EFAEC4 !important;
+}
+
+/* High-Contrast Protection: Elements with Pastel Pink or Light Surfaces in Dark Mode */
+html.dark #curadoria-card-pink,
+html.dark #curadoria-card-pink [class*="text-"],
+html.dark #curadoria-card-pink .text-\[\#153833\],
+html.dark #curadoria-card-pink .text-\[\#0c2521\],
+html.dark #curadoria-card-pink div,
+html.dark #curadoria-card-pink span,
+html.dark #curadoria-card-pink p {
+  color: #0c2521 !important;
+}
+
+html.dark #curadoria-card-pink .text-pink-700,
+html.dark #curadoria-card-pink .text-pink-800,
+html.dark #curadoria-card-pink .text-pink-900 {
+  color: #831843 !important;
+}
+
+html.dark #curadoria-card-pink svg {
+  color: #0c2521 !important;
+}
+
+html.dark #curadoria-card-pink #btn-random-curatorship,
+html.dark #curadoria-card-pink #btn-random-curatorship span {
+  color: #ffffff !important;
+  background-color: #0c2521 !important;
+}
+
+html.dark #curadoria-card-pink #btn-random-curatorship svg {
+  color: #EFAEC4 !important;
+}
+
+html.dark #curadoria-card-pink #btn-curador-tour {
+  background-color: #ffffff !important;
+  color: #0c2521 !important;
+}
+
+html.dark #curadoria-card-pink #btn-curador-tour span {
+  color: #0c2521 !important;
+}
+
+html.dark #curadoria-card-pink #btn-curador-tour svg {
+  color: #db2777 !important;
+}
+
+/* Any button or solid surface on pastel pink background MUST have deep high-contrast text in Dark Mode */
+html.dark button.bg-\[\#EFAEC4\],
+html.dark a.bg-\[\#EFAEC4\],
+html.dark button.bg-\[\#EFAEC4\] span,
+html.dark a.bg-\[\#EFAEC4\] span,
+html.dark #turntable-play-toggle,
+html.dark #turntable-play-toggle span {
+  color: #0c2521 !important;
+}
+
+/* Featured item category and decade badge in Curadoria card MUST always be signature pink */
+#curadoria-card-dark #curadoria-featured-badge,
+#curadoria-card-dark #curadoria-featured-badge span {
+  color: #EFAEC4 !important;
+  border-color: rgba(239, 174, 196, 0.4) !important;
+}
+
+/* Music player track skip controls: pink details and icons */
+#turntable-prev-track,
+#turntable-next-track {
+  border-color: rgba(239, 174, 196, 0.6) !important;
+  color: #EFAEC4 !important;
+}
+
+#turntable-prev-track svg,
+#turntable-next-track svg {
+  color: #E07A9A !important;
+}
+
+html.dark #turntable-prev-track,
+html.dark #turntable-next-track {
+  background-color: rgba(239, 174, 196, 0.12) !important;
+  border-color: rgba(239, 174, 196, 0.5) !important;
+  color: #EFAEC4 !important;
+}
+
+html.dark #turntable-prev-track svg,
+html.dark #turntable-next-track svg {
+  color: #EFAEC4 !important;
+}
+
+html.dark #turntable-prev-track:hover,
+html.dark #turntable-next-track:hover {
+  background-color: rgba(239, 174, 196, 0.25) !important;
+  border-color: #EFAEC4 !important;
+}
+
+/* Modal and dialog card backgrounds */
+html.dark div[role="dialog"] .bg-white,
+html.dark [role="dialog"] .bg-white {
+  background-color: #152421 !important;
+  border-color: #2c423e !important;
+}
+
+html.dark div[role="dialog"] .bg-slate-50\/80,
+html.dark [role="dialog"] .bg-slate-50 {
+  background-color: #0f1a18 !important;
+}
+
+/* Filter Bar: Stronger Pink for SEÇÕES and ERA / DÉCADA */
+#filter-sections-title,
+#filter-sections-title span,
+#filter-sections-title svg,
+#filter-decades-title,
+#filter-decades-title span,
+#filter-decades-title svg {
+  color: #D84572 !important;
+}
+
+html.dark #filter-sections-title,
+html.dark #filter-sections-title span,
+html.dark #filter-sections-title svg,
+html.dark #filter-decades-title,
+html.dark #filter-decades-title span,
+html.dark #filter-decades-title svg {
+  color: #E07A9A !important;
+}
+
+/* Filter Bar: Green text for recommendation hint in characteristic page green */
+#filter-recommendation-hint,
+#filter-recommendation-hint span,
+#filter-recommendation-hint svg,
+html.dark #filter-recommendation-hint,
+html.dark #filter-recommendation-hint span,
+html.dark #filter-recommendation-hint svg {
+  color: #153833 !important;
+}
+
+/* Filter Bar: Green background fill for requested buttons:
+   Dança; Música; Cinema; Artes; Eletronicos; 1920s, 1950s, 1960s, 1970s, 1980s, 1990s, 2000s e 2010s */
+#filter-sec-danca,
+#filter-sec-musica,
+#filter-sec-cinema,
+#filter-sec-artes-plasticas,
+#filter-sec-eletronicos,
+#filter-dec-1920s,
+#filter-dec-1950s,
+#filter-dec-1960s,
+#filter-dec-1970s,
+#filter-dec-1980s,
+#filter-dec-1990s,
+#filter-dec-2000s,
+#filter-dec-2010s {
+  background-color: #153833 !important;
+  border-color: #153833 !important;
+  color: #ffffff !important;
+}
+
+#filter-sec-danca:hover,
+#filter-sec-musica:hover,
+#filter-sec-cinema:hover,
+#filter-sec-artes-plasticas:hover,
+#filter-sec-eletronicos:hover,
+#filter-dec-1920s:hover,
+#filter-dec-1950s:hover,
+#filter-dec-1960s:hover,
+#filter-dec-1970s:hover,
+#filter-dec-1980s:hover,
+#filter-dec-1990s:hover,
+#filter-dec-2000s:hover,
+#filter-dec-2010s:hover {
+  background-color: #1f4e47 !important;
+  border-color: #1f4e47 !important;
+  color: #ffffff !important;
+}
+
+#filter-sec-danca span,
+#filter-sec-musica span,
+#filter-sec-cinema span,
+#filter-sec-artes-plasticas span,
+#filter-sec-eletronicos span,
+#filter-dec-1920s span,
+#filter-dec-1950s span,
+#filter-dec-1960s span,
+#filter-dec-1970s span,
+#filter-dec-1980s span,
+#filter-dec-1990s span,
+#filter-dec-2000s span,
+#filter-dec-2010s span {
+  color: #ffffff !important;
+}
+
+/* Form fields in Dark Mode */
+html.dark input[type="text"],
+html.dark input[type="search"],
+html.dark input[type="email"],
+html.dark input[type="password"],
+html.dark textarea,
+html.dark select {
+  background-color: #101c1a !important;
+  color: #f1f5f4 !important;
+  border-color: #273a36 !important;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #98aca7 !important;
+}
+
+/* Hover and active states in Dark Mode */
+html.dark .hover\:bg-slate-50:hover {
+  background-color: #1a2c29 !important;
+}
+
+html.dark .hover\:bg-slate-100:hover {
+  background-color: #1e332f !important;
+}
+
+html.dark .hover\:bg-slate-200:hover {
+  background-color: #28423c !important;
+}
+
+html.dark .hover\:bg-slate-300:hover {
+  background-color: #31514b !important;
+}
+
+html.dark .hover\:bg-pink-50:hover,
+html.dark .hover\:bg-pink-50\/70:hover {
+  background-color: #223733 !important;
+}
+
+/* Floating Capsule Navbar - Always signature pink (#EFAEC4) in both Light and Dark modes */
+header > div,
+header > div#navbar-floating-capsule,
+html.dark header > div,
+html.dark header > div#navbar-floating-capsule {
+  background-color: rgba(239, 174, 196, 0.96) !important;
+  border-color: rgba(255, 255, 255, 0.75) !important;
+  box-shadow: 0 12px 36px -4px rgba(224, 122, 154, 0.4), 0 4px 14px -2px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Navbar text and buttons inside pink capsule in Dark Mode - high contrast dark botanical */
+html.dark header nav button.text-\[\#153833\],
+html.dark header div.text-\[\#153833\],
+html.dark header button.text-\[\#153833\],
+html.dark header .text-\[\#153833\],
+html.dark header #navbar-floating-capsule nav button,
+html.dark header #navbar-floating-capsule button {
+  color: #0c2521 !important;
+}
+
+html.dark header nav button:hover,
+html.dark header button:hover {
+  background-color: rgba(255, 255, 255, 0.35) !important;
+  color: #000000 !important;
+}
+
+html.dark header nav button.bg-\[\#153833\],
+html.dark header #navbar-floating-capsule nav button.bg-\[\#153833\] {
+  background-color: #0c2521 !important;
+  color: #ffffff !important;
+}
+
+html.dark header .bg-white\/20,
+html.dark header .bg-white\/25,
+html.dark header .bg-white\/30,
+html.dark header #navbar-floating-capsule .bg-white\/20,
+html.dark header #navbar-floating-capsule .bg-white\/25,
+html.dark header #navbar-floating-capsule .bg-white\/30 {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  color: #0c2521 !important;
+  border-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+html.dark header .bg-\[\#153833\],
+html.dark header #navbar-floating-capsule .bg-\[\#153833\] {
+  background-color: #0c2521 !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+html.dark header button:not(.bg-\[\#153833\]) svg,
+html.dark header .text-\[\#153833\] svg {
+  color: #0c2521 !important;
+}
+
+html.dark header .bg-\[\#153833\] svg {
+  color: #ffffff !important;
+}
+
+/* Iridescent Orbs & Bubbles - Preserve pure light reflections across all themes */
+[data-orb-highlight],
+.orb-reflection-highlight {
+  background-color: transparent !important;
+}
+
+/* Hero Monumental Title "SYNTHETICA" in Dark Mode */
+html.dark #hero-title-synthetica,
+html.dark h1#hero-title-synthetica {
+  color: #ffffff !important;
+}
+
+/* Card3D border in dark mode */
+html.dark .group .rounded-\[24px\] {
+  background-color: #14211e !important;
+  border-color: #273a36 !important;
+}
+
+html.dark .group:hover .rounded-\[24px\] {
+  border-color: #EFAEC4 !important;
+}
+
+/* Custom scrollbar utility for sleek horizontal overflow containers */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ========================================================
+   ACCESSIBILITY EXTENSIONS (WCAG AAA & USABILITY)
+   ======================================================== */
+
+/* 1. Typography scaling */
+html.a11y-font-large {
+  font-size: 115%;
+}
+
+html.a11y-font-xlarge {
+  font-size: 130%;
+}
+
+/* 2. Motion sensitivity reduction (WCAG 2.3.3 & 2.2.2) */
+html.a11y-reduced-motion *:not(.player-motion):not(.player-motion *),
+html.a11y-reduced-motion *:not(.player-motion):not(.player-motion *)::before,
+html.a11y-reduced-motion *:not(.player-motion):not(.player-motion *)::after,
+body.a11y-reduced-motion *:not(.player-motion):not(.player-motion *),
+body.a11y-reduced-motion *:not(.player-motion):not(.player-motion *)::before,
+body.a11y-reduced-motion *:not(.player-motion):not(.player-motion *)::after {
+  animation: none !important;
+  animation-duration: 0.0001ms !important;
+  animation-iteration-count: 1 !important;
+  transition: none !important;
+  transition-duration: 0.0001ms !important;
+  scroll-behavior: auto !important;
+}
+
+html.a11y-reduced-motion {
+  scroll-behavior: auto !important;
+}
+
+html.a11y-reduced-motion .animate-spin:not(.player-motion):not(.player-motion *),
+html.a11y-reduced-motion .animate-ping:not(.player-motion):not(.player-motion *),
+html.a11y-reduced-motion .animate-pulse:not(.player-motion):not(.player-motion *),
+html.a11y-reduced-motion .animate-bounce:not(.player-motion):not(.player-motion *) {
+  animation: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *:not(.player-motion):not(.player-motion *),
+  *:not(.player-motion):not(.player-motion *)::before,
+  *:not(.player-motion):not(.player-motion *)::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-spin:not(.player-motion):not(.player-motion *),
+  .animate-ping:not(.player-motion):not(.player-motion *),
+  .animate-pulse:not(.player-motion):not(.player-motion *),
+  .animate-bounce:not(.player-motion):not(.player-motion *),
+  [class*="animate-"]:not(.player-motion):not(.player-motion *) {
+    animation: none !important;
+  }
+}
+
+/* 3. Dyslexia-friendly and expanded legibility */
+html.a11y-readable-font {
+  letter-spacing: 0.03em !important;
+  word-spacing: 0.05em !important;
+  line-height: 1.75 !important;
+}
+
+/* 4. High Contrast Dark Mode (WCAG AAA compliance) */
+html.a11y-high-contrast {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+html.a11y-high-contrast body {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+html.a11y-high-contrast .bg-white,
+html.a11y-high-contrast .bg-slate-50,
+html.a11y-high-contrast .bg-slate-100 {
+  background-color: #050505 !important;
+  color: #ffffff !important;
+  border-color: #facc15 !important;
+}
+
+html.a11y-high-contrast .text-slate-900,
+html.a11y-high-contrast .text-slate-800,
+html.a11y-high-contrast .text-slate-700,
+html.a11y-high-contrast .text-slate-600 {
+  color: #ffffff !important;
+}
+
+html.a11y-high-contrast .text-slate-500,
+html.a11y-high-contrast .text-slate-400 {
+  color: #fde047 !important;
+}
+
+html.a11y-high-contrast .border-slate-200,
+html.a11y-high-contrast .border-slate-100,
+html.a11y-high-contrast .border-slate-300 {
+  border-color: #facc15 !important;
+}
+
+/* 5. Skip Links for Keyboard Navigation */
+.skip-link {
+  position: absolute;
+  top: -120px;
+  left: 20px;
+  background: #153833;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 9999px;
+  font-weight: 800;
+  font-size: 13px;
+  z-index: 99999;
+  border: 2px solid #EFAEC4;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  transition: top 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 16px;
+  outline: 3px solid #facc15;
+  outline-offset: 3px;
+}
+
+/* 6. Turntable & Analog Audio Signal Animations */
+@keyframes spinVinylRecord {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-vinyl-spin {
+  animation-name: spinVinylRecord;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes tonearmTracking {
+  0% {
+    transform: rotate(17.5deg) translateY(0px);
+  }
+  25% {
+    transform: rotate(18.2deg) translateY(0.4px);
+  }
+  50% {
+    transform: rotate(17.8deg) translateY(-0.2px);
+  }
+  75% {
+    transform: rotate(18.5deg) translateY(0.5px);
+  }
+  100% {
+    transform: rotate(17.5deg) translateY(0px);
+  }
+}
+
+.animate-tonearm-groove {
+  animation: tonearmTracking 2.4s ease-in-out infinite;
+}
+
+@keyframes analogSignalWave {
+  0%, 100% {
+    transform: scaleY(0.25) translateY(0);
+    opacity: 0.45;
+  }
+  50% {
+    transform: scaleY(1.0) translateY(-2px);
+    opacity: 1;
+    filter: drop-shadow(0 0 6px currentColor);
+  }
+}
+
+.animate-analog-wave {
+  animation-name: analogSignalWave;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  transform-origin: bottom center;
+}
+
+@keyframes analogDotPulse {
+  0%, 100% {
+    transform: translateY(0) scale(0.85);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(-5px) scale(1.3);
+    opacity: 1;
+    filter: drop-shadow(0 0 6px currentColor);
+  }
+}
+
+.animate-analog-dot {
+  animation-name: analogDotPulse;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+
+
+
